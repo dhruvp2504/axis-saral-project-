@@ -11,7 +11,9 @@ import AddNewsFeed from "../pages/NewsFeed/AddNewsFeed";
 import NewsFeed from "../pages/NewsFeed/NewsFeed";
 import Notification from "../pages/Notification/Notification";
 import OurServices from "../pages/OurServices/OurServices";
+import Policy from "../pages/PolicyDocuments/Policy";
 import PolicyDocuments from "../pages/PolicyDocuments/PolicyDocuments";
+import Scd from "../pages/PolicyDocuments/Scd";
 import Sop from "../pages/PolicyDocuments/Sop";
 import AddProject from "../pages/ProjectPage/AddProject";
 import ProjectDetails from "../pages/ProjectPage/ProjectDetails";
@@ -42,6 +44,8 @@ const BaseRouter = () => {
         <Route path="/update-project" element={<PrivateRoute children={<UpdateProject />} />} />
         <Route path="/send-mails" element={<PrivateRoute children={<Notification />} />} />
         <Route path="/sops" element={<PrivateRoute children={<Sop />} />} />
+        <Route path="/scds" element={<PrivateRoute children={<Scd />} />} />
+        <Route path="/policies" element={<PrivateRoute children={<Policy/>} />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </>
