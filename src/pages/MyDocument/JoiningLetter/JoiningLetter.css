@@ -1,0 +1,48 @@
+.main-heading1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.subject {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.address {
+  padding: 5px;
+  font-weight: bold;
+}
+
+.para1 {
+  padding: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.joinBtn {
+  width: 20%;
+  height: 3rem;
+  transition: 0.2s;
+  margin-left: 88vh;
+  margin-top: 5vh;
+  border: none;
+  border-radius: 25px;
+  margin-top: 2.8rem;
+  background-color: #97144d;
+  color: white;
+} 
+.joinBtn :hover{
+  background-color: white;
+  color: #97144d; 
+}
+
+@media print {
+  button {
+    display: none;
+  }
+}

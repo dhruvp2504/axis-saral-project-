@@ -1,0 +1,51 @@
+.main-heading2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.address1 {
+  text-align: left;
+  padding: 1px;
+  font-size: 16px;
+}
+
+.subject1 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title1 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.right-bottom1 {
+  text-align: right;
+  padding: 5px;
+}
+
+.bold1 {
+  font-weight: bold;
+}
+
+.incrBtn {
+  width: 20%;
+  height: 3rem;
+  margin-left: 88vh;
+  margin-right: auto;
+  margin-top: -8rem;
+  margin-bottom: 2rem;
+  transition: 0.2s;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(174, 39, 95);
+}
+
+.incrBtn:hover{
+  color: #97144d;
+  background-color: white;
+}

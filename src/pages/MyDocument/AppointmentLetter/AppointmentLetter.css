@@ -1,0 +1,78 @@
+.pageArea {
+  width: 100%;
+  height: 100vh;
+  border: 5px solid #ae257f;
+}
+
+.leftSide {
+  padding: 5px;
+  margin: 10px;
+  text-align: left;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 8px;
+  text-decoration: underline;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: left;
+  margin-left: -15px;
+}
+
+.para {
+  text-align: left;
+  font-size: 15px;
+}
+
+.right-bottom {
+  text-align: right;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.left-bottom {
+  text-align: left;
+  font-weight: bold;
+  padding: 15px;
+}
+
+p {
+  padding: 10px;
+}
+.appBtn {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.2s;
+  margin: 15px 0;
+  width: 10%;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #97144d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-left: 100vh;
+  margin-top: -2vh; 
+}
+
+.appBtn:hover {
+  background-color: white;
+  border: none;
+  color: #97144d;
+}
+
+@media print {
+  button {
+    display: none;
+  }
+}

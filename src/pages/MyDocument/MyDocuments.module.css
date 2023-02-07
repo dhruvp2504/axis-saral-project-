@@ -1,0 +1,26 @@
+.btnCss{
+width: 20rem;
+height: 10rem;
+}
+.docsBtn{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    background-color: #97144d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
+}
+
+.docsBtn :hover{
+    color: white;
+    background-color: #97144d;
+}
+.docsContainer{
+    display: flex;
+    gap: 2rem;
+    margin-left: 5rem;
+    margin-top: 15rem;
+}
+

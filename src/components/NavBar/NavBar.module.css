@@ -1,0 +1,60 @@
+.header {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #97144d;
+  position: sticky;
+  top: 0;
+  color: white;
+}
+
+.logo {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 3rem;
+  padding-right: 1rem;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+ul li:first-child {
+  margin-left: auto;
+}
+
+.header li {
+  margin-left: 3rem;
+  font-weight: bold;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.2s;
+}
+
+.header a:hover,
+.header a:active {
+  color: whitesmoke;
+  letter-spacing: 0.15rem;
+}
+
+.login {
+  position: static;
+  right: 0px;
+}
+
+@media print{
+  .header{
+    display: none;
+  }
+}

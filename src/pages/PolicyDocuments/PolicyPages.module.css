@@ -1,0 +1,7 @@
+.polDocsContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px 50px;
+    padding-left: 6rem;
+    padding-top: 3rem;
+}

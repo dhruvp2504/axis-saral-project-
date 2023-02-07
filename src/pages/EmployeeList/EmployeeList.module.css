@@ -1,0 +1,32 @@
+
+caption{
+    font-size: 2rem;
+}
+.empTable {
+    border: 2px solid black;
+    width: 100vw;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+ .empTable th{
+    border: 2px solid black;
+    text-align: center;
+    /* padding: 10px; */
+    border-collapse: collapse;
+    height: 100px;
+    vertical-align: middle;
+ }
+  .empTable td {
+    border: 2px solid black;
+    text-align: center;
+    /* padding: 10px; */
+    border-collapse: collapse;
+    height: 100px;
+    vertical-align: middle;
+  }
+  
+  .empRow:hover{
+    background-color: #97144d;
+    color: white;
+  }

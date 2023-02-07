@@ -1,0 +1,93 @@
+.cardContainer{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 50px 50px;
+    padding-left: 6rem;
+    padding-top: 3rem;
+}
+.imageList{
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.image{
+    border: 1px solid black;
+}
+.title{
+    text-align: center;
+    color: white;
+}
+.text{
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+.explore{
+    text-align: center;
+    margin-left: 2.8rem;
+    color: #97144d;
+    background-color: white;
+    width: 60%;
+    height: 2.6rem;
+    border-radius: 14px;
+    border: none;
+}
+
+.link{
+    text-decoration: none;
+    color: #97144d;
+}
+.link:visited{
+    color: inherit;
+}
+.link:hover{
+    letter-spacing: 3px;
+}
+.card{
+    background-color: #97144d;
+    width: 18rem;   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.addNewsBtn {
+    margin-right: 3rem;
+    margin-top: 3rem;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #97144d;
+    color: white;
+    font-size: 1.4rem;
+  }
+  
+  .addNewsBtn:hover {
+    background-color: white;
+    color: #97144d;
+  }
+  
+  .cmtDltBtn{
+    float: right;
+    margin-top: -3rem;
+    margin-right: 2rem;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #97144d;
+    color: white;
+    font-size: 10px;
+  }
+  
+  .cmtDltBtn:hover {
+    background-color: #97144d;
+    color: black;
+  }
+  
+.addNewsBtnCont{
+    float: right;
+}
+
