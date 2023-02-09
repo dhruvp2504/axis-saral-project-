@@ -5,7 +5,7 @@
   width: 100%;
   height: 100vh;
   background-color: #555;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +22,64 @@
 
 .popUpInner .closeButton {
   position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
+  top: 5px;
+  width: 25px;
+  right: 5px;
+  height: 25px;
+  transition: all 200ms;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #97144d;
+  color: white;
+}
+
+.leftCont {
+  width: 55%;
+  height: 60%;
+  background-color: #97144d;
+  color: white;
+}
+
+.leftCont ul {
+  list-style: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.leftCont ul li {
+  padding: 8px;
+}
+
+.rightCont {
+  width: 30%;
+  height: 40%;
+  margin-left: 23rem;
+  margin-top: -13rem;
+
+}
+
+.bottomCont {
+  margin-top: 3.6rem;
+  width: 100%;
+  height: 40%;
+  background-color: #97144d;
+  color: white;
+}
+
+.bottomCont ul {
+  list-style: none;;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.bottomCont ul li {
+  padding: 10px;
+}
+
+
+.rightCont img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
 }

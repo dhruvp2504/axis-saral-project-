@@ -1,0 +1,12 @@
+.sidebar {
+    width: 330px;
+    height: 75%;
+    background-color: #97144d;
+    color: white;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+  }

@@ -1,12 +1,17 @@
 
 caption{
     font-size: 2rem;
+
 }
 .empTable {
     border: 2px solid black;
-    width: 100vw;
+    width: 95vw;
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto  ;
     border-collapse: collapse;
+    background-color: white;
+    color: #97144d;
 }
 
  .empTable th{

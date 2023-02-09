@@ -9,7 +9,8 @@ import { isAdmin } from "../../utils/CheckLogin";
 
 const Comment = (props) => {
   let token = localStorage.getItem("jwt");
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
+  const [showComments, setShowComments] = useState();
   const empEmail = localStorage.getItem("emailId");
   console.log("Local", empEmail);
   const [empList, setEmpList] = useState([]);
@@ -45,7 +46,7 @@ const Comment = (props) => {
       .catch((err) => {
         console.log(err);
       });
-  }, [setCommentList]);
+  }, [comment]);
 
   const postComment = (e) => {
     e.preventDefault();
@@ -79,39 +80,34 @@ const Comment = (props) => {
       });
   };
 
-  const handleDelete = (commentId) => {
-    axios
-      .delete(`http://localhost:8100/comment/delete/${commentId}`, {
-        headers: `${token}`,
-      })
-      .then((response) => {
-        // alert(response.data);
-        alert("Comment Deleted!")
-        window.location.reload(true);
-      })
-      .catch((err) => {
-        console.log("Err", err);
-      });
-  };
+  // const handleDelete = (commentId) => {
+  //   axios
+  //     .delete(`http://localhost:8100/comment/delete/${commentId}`, {
+  //       headers: `${token}`,
+  //     })
+  //     .then((response) => {
+  //       // alert(response.data);
+  //       alert("Comment Deleted!");
+  //       window.location.reload(true);
+  //     })
+  //     .catch((err) => {
+  //       console.log("Err", err);
+  //     });
+  // };
 
   return (
     <>
       <div className={classes.newsContainer}>
         <h1 className={classes.heading2}>News Title: {props.news.newsTitle}</h1>
         <div></div>
-        <img src={props.news.newsContent} width="100%" height="50%" />
-        <p
-          className="cmtBtn"
-          onClick={() => setOpen(!open)}
-          aria-controls="example-collapse-text"
-          aria-expanded={open}
-        >
+        <img src={props.news.newsContent} width="100%" height="50%"  />
+        <p className="cmtBtn" onClick={() => setShowComments(!showComments)}>
           <FaComment
           // class="btn btn-danger"
           ></FaComment>{" "}
           Comment
         </p>
-        <Collapse in={open}>
+        {showComments && (
           <div id="example-collapse-text">
             <div className={classes.cardBody}>
               <div className={classes.btnInside}>
@@ -152,7 +148,7 @@ const Comment = (props) => {
                         </h5>
                         <p className={classes.itemName}>{item1?.message}</p>
                         <hr />
-                        {isAdmin() ? (
+                        {/* {isAdmin() ? (
                           <button
                             className={classes.cmtDltBtn}
                             onClick={() => {
@@ -163,14 +159,14 @@ const Comment = (props) => {
                           </button>
                         ) : (
                           ""
-                        )}
+                        )} */}
                       </div>
                     </div>
                   );
                 })}
             </div>
           </div>
-        </Collapse>
+        )}
       </div>
     </>
   );

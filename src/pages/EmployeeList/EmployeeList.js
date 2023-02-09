@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 // import { Link } from "react-router-dom";
-// im port PopUp from "../../components/PopUp/PopUp";
+import PopUp from "../../components/PopUp/PopUp";
 import classes from "./EmployeeList.module.css";
 
 const EmployeeList = () => {
@@ -10,6 +10,8 @@ const EmployeeList = () => {
   const [empList, setEmpList] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
+  const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [children, setChildren] = useState({});
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
@@ -39,22 +41,24 @@ const EmployeeList = () => {
         console.log(err);
       });
   }, [setEmpList]);
+
+
   return (
     <div>
       <form
         class="example"
         style={{
-          "margin-left": "auto",
-          "margin-right": "auto",
-          "margin-top": "2rem",
-          "max-width": "400px",
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": "2rem",
+          "maxWidth": "400px",
         }}
       >
         <input
           type="text"
           placeholder="Search.."
           name="search2"
-          onChange={(e) => searchItems(e.target.value)}
+          onKeyUp={(e) => searchItems(e.target.value)}
         />
       </form>
       <table className={classes.empTable}>
@@ -66,35 +70,16 @@ const EmployeeList = () => {
           <th>Mobile Number</th>
           <th>Current Project</th>
         </tr>
-        {/* {
-        empList?.map((emp, key) => {
-          return (
-            <>
-              <tr
-                id={key}
-                className={classes.empRow}
-                // onClick={() => {
-                //   setTrigger(true);
-                // }}
-              >
-                <td>{`${emp.firstName} ${emp.middleName} ${emp.lastName}`}</td>
-                <td>{emp.designation}</td>
-                <td>{emp.emailId}</td>
-                <td>{emp.mobileNumber}</td>
-                <td>{emp.project.projectTitle}</td>
-              </tr>
-            </>
-          );
-        })} */}
-        {searchInput.length > 1
+        {searchInput.length > 0
           ? filteredResults?.map((emp, key) => {
               return (
                 <tr
                   id={key}
                   className={classes.empRow}
-                  // onClick={() => {
-                  //   setTrigger(true);
-                  // }}
+                  onClick={() => {
+                    setButtonPopUp(true);
+                    setChildren(emp);
+                  }}
                 >
                   <td>{`${emp.firstName} ${emp.middleName} ${emp.lastName}`}</td>
                   <td>{emp.designation}</td>
@@ -106,19 +91,27 @@ const EmployeeList = () => {
             })
           : empList?.map((emp, key) => {
               return (
-                <tr
-                  id={key}
-                  className={classes.empRow}
-                  // onClick={() => {
-                  //   setTrigger(true);
-                  // }}
-                >
-                  <td>{`${emp.firstName} ${emp.middleName} ${emp.lastName}`}</td>
-                  <td>{emp.designation}</td>
-                  <td>{emp.emailId}</td>
-                  <td>{emp.mobileNumber}</td>
-                  <td>{emp.project.projectTitle}</td>
-                </tr>
+                <>
+                  <tr
+                    id={key}
+                    className={classes.empRow}
+                    onClick={() => {
+                      setButtonPopUp(true);
+                      setChildren(emp);
+                    }}
+                  >
+                    <td>{`${emp.firstName} ${emp.middleName} ${emp.lastName}`}</td>
+                    <td>{emp.designation}</td>
+                    <td>{emp.emailId}</td>
+                    <td>{emp.mobileNumber}</td>
+                    <td>{emp.project.projectTitle}</td>
+                  </tr>
+                  <PopUp
+                    trigger={buttonPopUp}
+                    setTrigger={setButtonPopUp}
+                    children={children}
+                  />
+                </>
               );
             })}
       </table>

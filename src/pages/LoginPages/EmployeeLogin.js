@@ -53,7 +53,7 @@ const EmployeeLogin = () => {
             setEmail(e.target.value);
           }}
         />
-        <label>Employee Email ID</label>
+        <label>Email ID</label>
       </div>
       <div class="field">
         <span class="fas fa-lock"></span>

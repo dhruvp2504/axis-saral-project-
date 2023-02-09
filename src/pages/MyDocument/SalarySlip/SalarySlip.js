@@ -59,43 +59,43 @@ const SalarySlip = () => {
                       <br />
 
                       <tr className="heading">
-                        <th>Standard Monthly Salary</th>
+                        <th>{`Standard Yearly Salary: ${ele.salary}`}</th>
                       </tr>
 
                       <tr>
                         <th className="dataFields">Basic Pay</th>
 
-                        <td>{(70 / 100) * ele.salary}</td>
+                        <td>{(70 / (100*12)) * ele.salary}</td>
                       </tr>
 
                       <tr>
                         <th className="dataFields">Allowance</th>
 
-                        <td>{(3 / 100) * ele.salary}</td>
+                        <td>{(3 / (12*100)) * ele.salary}</td>
                       </tr>
 
                       <tr>
                         <th className="dataFields">Location Pay</th>
 
-                        <td>{(10 / 100) * ele.salary}</td>
+                        <td>{(10 /(12*100)) * ele.salary}</td>
                       </tr>
 
                       <tr>
                         <th className="dataFields">Benefits Pay</th>
 
-                        <td>{(4 / 100) * ele.salary}</td>
+                        <td>{(4 / (12*100)) * (ele.salary)}</td>
                       </tr>
 
                       <tr>
                         <th className="dataFields">PF Contribution</th>
 
-                        <td>{(13 / 100) * ele.salary}</td>
+                        <td>{(13 / (12*100)) * ele.salary}</td>
                       </tr>
 
                       <tr className="salary">
                         <th className="dataFields">Net Pay</th>
 
-                        <td>{ele.salary}</td>
+                        <td>{ele.salary/12}</td>
                       </tr>
                     </thead>
                   </table>

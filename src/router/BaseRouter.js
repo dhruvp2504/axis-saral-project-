@@ -11,6 +11,7 @@ import AddNewsFeed from "../pages/NewsFeed/AddNewsFeed";
 import NewsFeed from "../pages/NewsFeed/NewsFeed";
 import Notification from "../pages/Notification/Notification";
 import OurServices from "../pages/OurServices/OurServices";
+import AddPolicyDoc from "../pages/PolicyDocuments/AddPolicyDoc";
 import Policy from "../pages/PolicyDocuments/Policy";
 import PolicyDocuments from "../pages/PolicyDocuments/PolicyDocuments";
 import Scd from "../pages/PolicyDocuments/Scd";
@@ -46,6 +47,7 @@ const BaseRouter = () => {
         <Route path="/sops" element={<PrivateRoute children={<Sop />} />} />
         <Route path="/scds" element={<PrivateRoute children={<Scd />} />} />
         <Route path="/policies" element={<PrivateRoute children={<Policy/>} />} />
+        <Route path="/add-policy-doc" element={<PrivateRoute children={<AddPolicyDoc />} />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </>

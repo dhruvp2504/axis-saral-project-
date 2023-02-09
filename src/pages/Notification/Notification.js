@@ -22,7 +22,10 @@ const Notification = () => {
           },
         }
       )
-      .then(alert("Notification Sent Successfully!"))
+      .then(() => {
+        alert("Notification Sent Successfully!");
+        window.location.reload(true);
+      })
       .catch((err) => {
         console.log(err);
       });
@@ -35,6 +38,7 @@ const Notification = () => {
         <input
           className="form-input"
           type="text"
+          required
           placeholder="Title"
           value={input1}
           onChange={(e) => setInput1(e.target.value)}
@@ -42,6 +46,7 @@ const Notification = () => {
         <textarea
           className="form-input-about"
           type="text"
+          required
           placeholder="Message"
           value={input2}
           onChange={(e) => setInput2(e.target.value)}

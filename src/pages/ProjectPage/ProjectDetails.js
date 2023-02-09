@@ -11,7 +11,7 @@ const ProjectDetails = (props) => {
   const params = useParams();
   const [project, setProject] = useState({});
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     axios
       .get(`http://localhost:8100/project/${params.projectId}`, {
@@ -26,7 +26,8 @@ const ProjectDetails = (props) => {
 
   const editProj = (e) => {
     e.preventDefault();
-    navigate("/update-project");
+    localStorage.setItem("projUpdateId",project.projectId)
+    navigate(`/update-project`);
   };
   const deleteProject = (e) => {
     e.preventDefault();
