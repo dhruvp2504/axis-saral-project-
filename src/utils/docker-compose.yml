@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: axis_saral_react
+    image: axis_saral_react
+    build: 
+      context: .
+    ports:
+      - 8080:80
